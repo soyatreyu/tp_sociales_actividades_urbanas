@@ -1,52 +1,52 @@
 const preguntas = [
     {
-        pregunta: "¿En qué país se jugó la primera Copa Mundial de Fútbol?",
-        opciones: ["Brasil", "Uruguay", "Italia"],
+        pregunta: "1. ¿Qué son las actividades productivas urbanas?",
+        opciones: ["Actividades que se realizan en el campo", "Actividades económicas que se desarrollan en la ciudad", "Actividades relacionadas con el turismo"],
         respuesta: 2
     },
     {
-        pregunta: "¿Cuántos jugadores hay en el campo durante un partido?",
-        opciones: ["22", "11", "8"],
+        pregunta: "2. ¿Cuál es un ejemplo de una actividad productiva urbana?",
+        opciones: ["Venta de productos en un mercado", "Pesca en el río", "Cosecha de maíz en una granja"],
         respuesta: 1
     },
     {
-        pregunta: "¿Cuál es el nombre de la novia de Davoo Xeneize?",
-        opciones: ["Sofía", "Carolina", "Milena"],
+        pregunta: "3. ¿Qué tipo de transporte es común en las actividades productivas urbanas?",
+        opciones: ["Carros tirados por caballos", "Tractores", "Camiones y bicicletas para entregas"],
         respuesta: 3
     },
     {
-        pregunta: "¿Qué jugador fue el ganador del Balón de Oro 2022?",
-        opciones: ["Ronaldo", "Benzema", "Messi"],
+        pregunta: "4. ¿Qué es el urbanismo sostenible?",
+        opciones: ["La construcción de edificios muy altos", "El uso de espacios verdes y tecnologías amigables con el medio ambiente en la ciudad", "El desarrollo de autopistas más anchas"],
         respuesta: 2
     },
     {
-        pregunta: "¿Quién ganó el Mundial de 1934?",
-        opciones: ["Uruguay", "Argentina", "Italia"],
+        pregunta: "5. ¿Qué hacen las empresas tecnológicas en las ciudades?",
+        opciones: ["Cultivan frutas y verduras", "Crían animales", "Desarrollan programas y aplicaciones de computadora"],
         respuesta: 3
     },
     {
-        pregunta: "¿Qué equipo Argentino fue el que sacó más puntos en la Fase de Grupos de la actual Copa Libertadores'?",
-        opciones: ["River", "Racing", "Boca"],
+        pregunta: "6. ¿Qué es el comercio en las ciudades?",
+        opciones: ["Hacer excursiones en la naturaleza", "Vender productos y servicios", "Cosechar frutas"],
         respuesta: 2
     },
     {
-        pregunta: "¿Quién es el arquero titular del Barcelona?",
-        opciones: ["Ter Stegen", "Tagliamonte", "Buffon"],
+        pregunta: "7. ¿Qué son las huertas urbanas?",
+        opciones: ["Espacios donde las personas cultivan plantas y vegetales en la ciudad ", "Campos grandes fuera de la ciudad", "Fabricas de ropa"],
         respuesta: 1
     },
     {
-        pregunta: "¿Cuál fue el resultado de los penales en la Final entre Inter Miami y Nashville'?",
-        opciones: ["5 a 3", "7 a 6", "10 a 9"],
+        pregunta: "8. ¿Por qué Marita no deja jugar al fútbol a los chicos en el patio?",
+        opciones: ["Por careta", "Por pensar en donas rellenas", "Ambas son correctas"],
         respuesta: 3
     },
     {
-        pregunta: "¿Quién fue el campeón de la primera edición de la Kings Legue?",
-        opciones: ["Porcinos FC", "El Barrio", "Ultimate Móstoles"],
+        pregunta: "9. ¿Qué es el reciclaje en las ciudades?",
+        opciones: ["Quemar basura", "Usar materiales viejos para hacer cosas nuevas", "Tirar basura al río"],
         respuesta: 2
     },
     {
-        pregunta: "¿Cuál es el equipo del Fútbol Argentino que tiene más copas?",
-        opciones: ["Racing", "Boca", "River"],
+        pregunta: "10. ¿Qué va a haber para la de Cate si sigue jodiendo?",
+        opciones: ["Bala", "Rapto", "Quema de Biblia"],
         respuesta: 2
     }
 ];
@@ -61,27 +61,12 @@ const tiempoElemento = document.getElementById('tiempo');
 
 let indicePregunta = 0;
 let puntuacion = 0;
-let tiempoRestante = 20;
-let temporizador;
 
 function mostrarPregunta() {
-    tiempoRestante = 20;
-    tiempoElemento.textContent = `Tiempo restante: ${tiempoRestante} segundos`;
-
     // Mostrar los checkboxes y etiquetas
     document.getElementById('opcion1-container').style.display = "block";
     document.getElementById('opcion2-container').style.display = "block";
     document.getElementById('opcion3-container').style.display = "block";
-
-    temporizador = setInterval(() => {
-        tiempoRestante--;
-        tiempoElemento.textContent = `Tiempo restante: ${tiempoRestante} segundos`;
-
-        if (tiempoRestante === 0) {
-            clearInterval(temporizador);
-            verificarRespuesta();
-        }
-    }, 2000);
 
     const preguntaActual = preguntas[indicePregunta];
     preguntaElemento.textContent = preguntaActual.pregunta;
@@ -95,7 +80,6 @@ function mostrarPregunta() {
 
     siguienteBoton.style.display = "block";
     inicioBoton.style.display = "none";
-    tiempoElemento.style.display = "block";
 }
 
 inicioBoton.addEventListener('click', () => {
@@ -104,8 +88,6 @@ inicioBoton.addEventListener('click', () => {
 });
 
 function verificarRespuesta() {
-    clearInterval(temporizador);
-
     const opcionSeleccionada = document.querySelector('input[name="opcion"]:checked');
     
     if (opcionSeleccionada) {
@@ -135,6 +117,5 @@ function verificarRespuesta() {
 
 inicioBoton.addEventListener('click', mostrarPregunta);
 siguienteBoton.addEventListener('click', () => {
-    clearInterval(temporizador);
     verificarRespuesta();
 });
