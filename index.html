@@ -27,33 +27,34 @@
             <h2 class="mb-4">Sobre lo expuesto en clase...</h2>
             <h3 class="mb-5">Y algunas cositas extras XD</h3>
             <button id="inicio" class="btn btn-primary">Comenzar</button>
-            <div class="respuestas-container mt-4">
-                <div id="pregunta" class="mt-4" style="display: none;"></div>
-                <div class="form-check" id="opcion1-container"> <!-- No se muestra inicialmente -->
-                    <input type="radio" class="form-check-input" name="opcion" id="opcion1">
-                    <label for="opcion1" class="form-check-label" id="label1"></label>
-                </div>
-                <div class="form-check" id="opcion2-container"> <!-- No se muestra inicialmente -->
-                    <input type="radio" class="form-check-input" name="opcion" id="opcion2">
-                    <label for="opcion2" class="form-check-label" id="label2"></label>
-                </div>
-                <div class="form-check" id="opcion3-container"> <!-- No se muestra inicialmente -->
-                    <input type="radio" class="form-check-input" name="opcion" id="opcion3">
-                    <label for="opcion3" class="form-check-label" id="label3"></label>
-                </div>
-                <div class="d-flex justify-content-center align-items-center flex-column mt-4">
-                    <button id="siguiente" class="btn btn-primary mt-2 mb-4" style="display: none;">Siguiente</button>
-                    <p id="puntuacion" class="mt-2" style="display: none;"></p>
-                </div>
+        </div>
+        <div class="respuestas-container mt-4">
+            <div id="pregunta" class="mt-4 text-center" style="display: none;"></div>
+            <div class="form-check" id="opcion1-container"> <!-- No se muestra inicialmente -->
+                <input type="radio" class="form-check-input" name="opcion" id="opcion1">
+                <label for="opcion1" class="form-check-label" id="label1"></label>
+            </div>
+            <div class="form-check" id="opcion2-container"> <!-- No se muestra inicialmente -->
+                <input type="radio" class="form-check-input" name="opcion" id="opcion2">
+                <label for="opcion2" class="form-check-label" id="label2"></label>
+            </div>
+            <div class="form-check" id="opcion3-container"> <!-- No se muestra inicialmente -->
+                <input type="radio" class="form-check-input" name="opcion" id="opcion3">
+                <label for="opcion3" class="form-check-label" id="label3"></label>
+            </div>
+            <div class="d-flex justify-content-center align-items-center flex-column mt-4">
+                <button id="siguiente" class="btn btn-primary mt-2 mb-4" style="display: none;">Siguiente</button>
+                <p id="puntuacion" class="mt-2" style="display: none;"></p>
             </div>
         </div>
     </div>
     
-
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024. TP Ciencias Sociales. Creado por Atreyu2406.</p>
     </footer>
 
+    <!-- Enlace a jQuery primero -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!-- Enlace al archivo JS de Bootstrap (opcional, para funcionalidades avanzadas) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

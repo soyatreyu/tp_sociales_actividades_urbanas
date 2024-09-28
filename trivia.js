@@ -111,7 +111,6 @@ function verificarRespuesta() {
             labelElementos[i].style.display = "none";
         }
         siguienteBoton.style.display = "none";
-        tiempoElemento.style.display = "none";
     }
 }
 
