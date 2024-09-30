@@ -15,13 +15,13 @@ const preguntas = [
         respuesta: 3
     },
     {
-        pregunta: "4. ¿Qué es el urbanismo sostenible?",
-        opciones: ["La construcción de edificios muy altos", "El uso de espacios verdes y tecnologías amigables con el medio ambiente en la ciudad", "El desarrollo de autopistas más anchas"],
+        pregunta: "4. ¿Cuál es una diferencia clave entre áreas urbanas y rurales?",
+        opciones: ["En las áreas urbanas hay más naturaleza", "Las áreas urbanas tienen más población y actividades comerciales que las rurales", "En las áreas rurales hay más edificios altos"],
         respuesta: 2
     },
     {
         pregunta: "5. ¿Qué hacen las empresas tecnológicas en las ciudades?",
-        opciones: ["Cultivan frutas y verduras", "Crían animales", "Desarrollan programas y aplicaciones de computadora"],
+        opciones: ["Cultivan frutas y verduras", "Crían animales", "Desarrollan programas y aplicaciones para dispositivos"],
         respuesta: 3
     },
     {
@@ -35,18 +35,18 @@ const preguntas = [
         respuesta: 1
     },
     {
-        pregunta: "8. ¿Por qué Marita no deja jugar al fútbol a los chicos en el patio?",
-        opciones: ["Por careta", "Por pensar en donas rellenas", "Ambas son correctas"],
-        respuesta: 3
-    },
-    {
-        pregunta: "9. ¿Qué es el reciclaje en las ciudades?",
+        pregunta: "8. ¿Qué es el reciclaje en las ciudades?",
         opciones: ["Quemar basura", "Usar materiales viejos para hacer cosas nuevas", "Tirar basura al río"],
         respuesta: 2
     },
     {
-        pregunta: "10. ¿Qué va a haber para la de Cate si sigue jodiendo?",
-        opciones: ["Bala", "Rapto", "Quema de Biblia"],
+        pregunta: "9. ¿Qué tipos de trabajos se encuentran en una ciudad?",
+        opciones: ["Agricultura y ganadería", "Conducción de trenes", "Pesca y minería"],
+        respuesta: 2
+    },
+    {
+        pregunta: "10. ¿Cómo ayudan los parques en las ciudades?",
+        opciones: ["Sirven como estacionamientos", "Reducen la contaminación y mejoran el aire", "Generan energía eléctrica"],
         respuesta: 2
     }
 ];
